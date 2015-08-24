@@ -1,6 +1,6 @@
 # docker run -dt -p 8111:8111 pluribuslabs/centos7-teamcity-server
 
-FROM pluribuslabs/centos7-oracle-jdk-7
+FROM pluribuslabs/centos7-oracle-jdks-7-8
 
 MAINTAINER Pluribus Labs Docker Dev <docker-dev@pluribuslabs.com>
 
@@ -10,7 +10,8 @@ ENV TEAMCITY_DATA_PATH /data/teamcity
 
 # Download and install TeamCity to /opt
 RUN yum -y install tar wget
-ENV TEAMCITY_PACKAGE TeamCity-9.0.4.tar.gz
+
+ENV TEAMCITY_PACKAGE TeamCity-9.1.1.tar.gz
 ENV TEAMCITY_DOWNLOAD http://download-cf.jetbrains.com/teamcity
 RUN wget $TEAMCITY_DOWNLOAD/$TEAMCITY_PACKAGE && \
     tar zxf $TEAMCITY_PACKAGE -C /opt && \
