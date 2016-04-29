@@ -11,8 +11,7 @@ ENV TEAMCITY_PACKAGE TeamCity-9.1.6.tar.gz
 ENV TEAMCITY_DOWNLOAD https://download.jetbrains.com/teamcity
 
 # Download and install TeamCity to /opt
-RUN yum -y update && \\
-    yum -y install tar wget docker && \
+RUN yum -y install tar wget && \
     wget $TEAMCITY_DOWNLOAD/$TEAMCITY_PACKAGE && \
     tar zxf $TEAMCITY_PACKAGE -C /opt && \
     rm -rf $TEAMCITY_PACKAGE
