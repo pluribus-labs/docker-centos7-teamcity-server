@@ -7,7 +7,7 @@ MAINTAINER Pluribus Labs Docker Dev <docker-dev@pluribuslabs.com>
 # TeamCity data stored in a volume to help with container upgrade
 VOLUME  ["/data/teamcity"]
 ENV TEAMCITY_DATA_PATH /data/teamcity
-ENV TEAMCITY_PACKAGE TeamCity-9.1.7.tar.gz
+ENV TEAMCITY_PACKAGE TeamCity-10.0.tar.gz
 ENV TEAMCITY_DOWNLOAD https://download.jetbrains.com/teamcity
 
 # Download and install TeamCity to /opt
